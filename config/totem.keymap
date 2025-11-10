@@ -14,7 +14,152 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+&soft_off { hold-time-ms = <2000>; };
+
 / {
+
+    homerow_tap_mods: homerow_tap_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_TAP_MODS";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;
+        flavor = "tap-preferred";
+        quick-tap-ms = <150>;
+    };
+
+    layer_quick_tab: layer_quick_tab {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LAYER_QUICK_TAB";
+        bindings = <&mo>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <300>;
+        flavor = "hold-preferred";
+        quick-tap-ms = <130>;
+        require-prior-idle-ms = <125>;
+    };
+
+    mouse_click_key: mouse_click_key {
+        compatible = "zmk,behavior-hold-tap";
+        label = "MOUSE_CLICK_KEY";
+        bindings = <&mkp>, <&mkp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;
+    };
+
+    knob_mouse_scroll: knob_mouse_scroll {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "KNOB_MOUSE_SCROLL";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    };
+
+    mouse_click_tab_dance: mouse_click_tab_dance {
+        compatible = "zmk,behavior-tap-dance";
+        label = "MOUSE_CLICK_TAB_DANCE";
+        #binding-cells = <0>;
+        bindings = <&mkp LCLK>, <&mouse_click_key RCLK LCLK>;
+    };
+
+    layer_hold_tap: layer_hold_tap {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LAYER_HOLD_TAP";
+        bindings = <&mo>, <&tog>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+    };
+
+    space_shift_homerow: space_shift_homerow {
+        compatible = "zmk,behavior-hold-tap";
+        label = "SPACE_SHIFT_HOMEROW";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <150>;
+        retro-tap;
+    };
+
+    homerow_balance_mods: homerow_balance_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_BALANCE_MODS";
+        bindings = <&kp>, <&kp>;
+
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;
+        flavor = "balanced";
+        quick-tap-ms = <150>;
+        retro-tap;
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        softoff_combo {
+            bindings = <&soft_off>;
+            key-positions = <14 28 40 24 36 50>;
+            timeout-ms = <100>;
+        };
+
+        momentary_bluetooth_layer_combo {
+            bindings = <&mo 8>;
+            key-positions = <59 60>;
+        };
+
+        backspace_combo {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <34 35>;
+            layers = <0 3 1 6>;
+            timeout-ms = <35>;
+        };
+
+        enter_combo {
+            bindings = <&kp ENTER>;
+            key-positions = <34 36>;
+            layers = <3 0 1 6>;
+            timeout-ms = <35>;
+        };
+
+        backspace2_combo {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <30 29>;
+            layers = <0 3 1>;
+            timeout-ms = <35>;
+        };
+
+        enter2_combo {
+            bindings = <&kp ENTER>;
+            key-positions = <30 28>;
+            layers = <0 3 1>;
+            timeout-ms = <35>;
+        };
+
+        esc_combo {
+            bindings = <&kp ESC>;
+            key-positions = <15 16>;
+            layers = <0 3 1>;
+            timeout-ms = <35>;
+        };
+
+        delete_combo {
+            bindings = <&kp DEL>;
+            key-positions = <47 48>;
+            timeout-ms = <35>;
+            layers = <0 3 1 6>;
+        };
+
+        delete_combo2 {
+            bindings = <&kp DEL>;
+            key-positions = <42 43>;
+            timeout-ms = <35>;
+            layers = <0 3 1>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -54,11 +199,6 @@
             >;
         };
 
-        extra1 { status = "reserved"; };
-
-        extra2 { status = "reserved"; };
-
-        extra3 { status = "reserved"; };
     };
 
     conditional_layers {
