@@ -181,6 +181,16 @@
             bindings = <&kp LG(V)>;
             key-positions = <24 23>;
         };
+
+        device_layer_combo {
+            bindings = <&mo 7>;
+            key-positions = <35 36 37>;
+        };
+
+        func_layer_combo {
+            bindings = <&mo 6>;
+            key-positions = <34 33 32>;
+        };
     };
 
     behaviors {
