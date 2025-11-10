@@ -169,11 +169,13 @@
         win+shift+s_combo {
             bindings = <&kp LG(LS(S))>;
             key-positions = <10 11>;
+            layers = <1>;
         };
 
         win+v_combo {
             bindings = <&kp LG(V)>;
             key-positions = <24 23>;
+            layers = <1>;
         };
 
         device_layer_combo {
