@@ -24,9 +24,9 @@
         bindings = <&kp>, <&kp>;
 
         #binding-cells = <2>;
-        tapping-term-ms = <200>;
+        tapping-term-ms = <250>;
         flavor = "tap-preferred";
-        quick-tap-ms = <200>;
+        quick-tap-ms = <250>;
     };
 
     layer_quick_tab: layer_quick_tab {
