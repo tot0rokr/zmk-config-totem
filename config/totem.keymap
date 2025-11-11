@@ -27,6 +27,7 @@
         tapping-term-ms = <250>;
         flavor = "tap-preferred";
         quick-tap-ms = <250>;
+        require-prior-idle-ms = <125>;
     };
 
     layer_quick_tab: layer_quick_tab {
