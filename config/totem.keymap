@@ -233,28 +233,28 @@
 
         LTL {
             bindings = <
-        &homerow_tap_mods CARET N6  &homerow_tap_mods AMPS N7  &homerow_tap_mods STAR N8  &homerow_tap_mods LPAR N9  &homerow_tap_mods RPAR N0     &trans  &trans  &trans  &trans  &trans
-        &homerow_tap_mods EXCL N1   &homerow_tap_mods AT N2    &homerow_tap_mods HASH N3  &homerow_tap_mods DLLR N4  &homerow_tap_mods PRCNT N5    &trans  &trans  &trans  &trans  &trans
-&trans  &trans                      &trans                     &trans                     &trans                     &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-                                                               &trans                     &trans                     &trans                        &trans  &trans  &trans
+       &homerow_tap_mods CARET N6  &homerow_tap_mods AMPS N7  &homerow_tap_mods STAR N8  &homerow_tap_mods LPAR N9  &homerow_tap_mods RPAR N0     &none  &none  &none  &none  &none
+       &homerow_tap_mods EXCL N1   &homerow_tap_mods AT N2    &homerow_tap_mods HASH N3  &homerow_tap_mods DLLR N4  &homerow_tap_mods PRCNT N5    &none  &none  &none  &none  &none
+&none  &none                       &none                      &none                      &none                      &none                         &none  &none  &none  &none  &none  &none
+                                                              &none                      &none                      &none                         &none  &none  &none
             >;
         };
 
         RTL {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp GRAVE  &kp TILDE  &kp LBRC  &kp RBRC
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp UNDER  &kp PLUS   &kp PIPE  &kp BACKSLASH  &trans
-                        &trans  &trans  &trans    &trans  &trans     &trans
+       &none  &none  &none  &none  &none    &none  &kp GRAVE  &kp TILDE  &kp LBRC  &kp RBRC
+       &none  &none  &none  &none  &none    &none  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
+&none  &none  &none  &none  &none  &none    &none  &kp UNDER  &kp PLUS   &kp PIPE  &kp BACKSLASH  &none
+                     &none  &none  &none    &none  &none      &none
             >;
         };
 
         FUNCL {
             bindings = <
-       &none  &none  &none  &none  &none    &kp F15    &kp F9           &kp F10  &kp F11  &kp F12
-       &none  &none  &none  &none  &none    &kp F14    &kp F5           &kp F6   &kp F7   &kp F8
-&none  &none  &none  &none  &none  &none    &kp F13    &kp F1           &kp F2   &kp F3   &kp F4   &kp F16
-                     &none  &none  &none    &kp LCTRL  &kp RIGHT_SHIFT  &none
+       &none  &none  &none  &none  &none    &kp F15    &kp F9          &kp F10  &kp F11  &kp F12
+       &none  &none  &none  &none  &none    &kp F14    &kp F5          &kp F6   &kp F7   &kp F8
+&none  &none  &none  &none  &none  &none    &kp F13    &kp F1          &kp F2   &kp F3   &kp F4   &kp F16
+                     &none  &none  &none    &kp LCTRL  &kp LEFT_SHIFT  &none
             >;
         };
 
@@ -269,19 +269,19 @@
 
         LCL {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none  &none
             >;
         };
 
         RCL {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+       &none  &none  &none  &none  &none    &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+                     &none  &none  &none    &none  &none  &none
             >;
         };
 
