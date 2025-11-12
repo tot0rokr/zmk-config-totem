@@ -103,28 +103,28 @@
         backspace_combo {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
-            layers = <0 4>;
+            layers = <0 4 5>;
             timeout-ms = <38>;
         };
 
         enter_combo {
             bindings = <&kp ENTER>;
             key-positions = <16 18>;
-            layers = <0 4>;
+            layers = <0 4 5>;
             timeout-ms = <38>;
         };
 
         backspace2_combo {
             bindings = <&kp BACKSPACE>;
             key-positions = <13 12>;
-            layers = <0 5>;
+            layers = <0 5 4>;
             timeout-ms = <38>;
         };
 
         enter2_combo {
             bindings = <&kp ENTER>;
             key-positions = <13 11>;
-            layers = <0 5>;
+            layers = <0 5 4>;
             timeout-ms = <38>;
         };
 
@@ -139,14 +139,14 @@
             bindings = <&kp DEL>;
             key-positions = <27 28>;
             timeout-ms = <38>;
-            layers = <0 4>;
+            layers = <0 4 5>;
         };
 
         delete_combo2 {
             bindings = <&kp DEL>;
             key-positions = <24 23>;
             timeout-ms = <38>;
-            layers = <0 5>;
+            layers = <0 5 4>;
         };
 
         win+e_combo {
