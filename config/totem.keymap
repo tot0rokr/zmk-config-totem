@@ -18,16 +18,15 @@
 &soft_off { hold-time-ms = <2000>; };
 
 / {
-    homerow_tap_mods: homerow_tap_mods {
+    quick_tab: quick_tab {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_TAP_MODS";
+        label = "QUICK_TAB";
         bindings = <&kp>, <&kp>;
 
         #binding-cells = <2>;
-        tapping-term-ms = <250>;
-        flavor = "tap-preferred";
-        quick-tap-ms = <250>;
-        require-prior-idle-ms = <125>;
+        tapping-term-ms = <150>;
+        flavor = "balanced";
+        quick-tap-ms = <150>;
     };
 
     layer_quick_tab: layer_quick_tab {
@@ -185,10 +184,10 @@
 
         BL {
             bindings = <
-           &kp Q  &kp W  &kp E                     &kp R                                  &kp T                     &kp Y                    &kp U                                   &kp I                     &kp O    &kp P
-           &kp A  &kp S  &kp D                     &kp F                                  &kp G                     &kp H                    &kp J                                   &kp K                     &kp L    &kp SEMI
-&kp LCTRL  &kp Z  &kp X  &kp C                     &kp V                                  &kp B                     &kp N                    &kp M                                   &kp COMMA                 &kp DOT  &kp FSLH  &kp APOS
-                         &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB    &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE
+           &kp Q               &kp W                    &kp E                     &kp R                                  &kp T                     &kp Y                    &kp U                                   &kp I                     &kp O                    &kp P
+           &quick_tab LCTRL A  &quick_tab LEFT_SHIFT S  &quick_tab LEFT_ALT D     &quick_tab LEFT_WIN F                  &kp G                     &kp H                    &quick_tab LEFT_WIN J                   &quick_tab LEFT_ALT K     &quick_tab LEFT_SHIFT L  &quick_tab LCTRL SEMI
+&kp LCTRL  &kp Z               &kp X                    &kp C                     &kp V                                  &kp B                     &kp N                    &kp M                                   &kp COMMA                 &kp DOT                  &kp FSLH               &kp APOS
+                                                        &layer_quick_tab 1 SPACE  &space_shift_homerow LEFT_SHIFT SPACE  &layer_quick_tab 4 TAB    &layer_quick_tab 5 RALT  &space_shift_homerow RIGHT_SHIFT SPACE  &layer_quick_tab 3 SPACE
             >;
         };
 
@@ -221,10 +220,10 @@
 
         LTL {
             bindings = <
-           &homerow_tap_mods CARET N6  &homerow_tap_mods AMPS N7  &homerow_tap_mods STAR N8  &homerow_tap_mods LPAR N9  &homerow_tap_mods RPAR N0     &none  &none  &none  &none  &none
-           &homerow_tap_mods EXCL N1   &homerow_tap_mods AT N2    &homerow_tap_mods HASH N3  &homerow_tap_mods DLLR N4  &homerow_tap_mods PRCNT N5    &none  &none  &none  &none  &none
-&kp EQUAL  &kp PLUS                    &kp MINUS                  &kp SPACE                  &kp COMMA                  &kp DOT                       &none  &none  &none  &none  &none  &none
-                                                                  &kp UNDER                  &none                      &none                         &none  &none  &none
+       &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                        &kp N6                      &kp N7     &kp N8     &kp N9    &kp N0
+       &kp LBKT  &kp RBKT  &kp LBRC   &kp RBRC   &quick_tab LEFT_SHIFT LPAR    &quick_tab LEFT_SHIFT RPAR  &kp UNDER  &kp MINUS  &kp PLUS  &kp PIPE
+&none  &none     &none     &kp GRAVE  &kp TILDE  &kp APOS                      &kp DQT                     &kp EQUAL  &kp COMMA  &kp DOT   &kp BSLH  &none
+                           &none      &none      &none                         &none                       &none      &none
             >;
         };
 
