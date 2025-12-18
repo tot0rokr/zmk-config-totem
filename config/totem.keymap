@@ -229,10 +229,10 @@
 
         RTL {
             bindings = <
-       &none  &none  &none  &none  &none    &none  &kp GRAVE  &kp TILDE  &kp LBRC  &kp RBRC
-       &none  &none  &none  &none  &none    &none  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT
-&none  &none  &none  &none  &none  &none    &none  &kp UNDER  &kp PLUS   &kp PIPE  &kp BACKSLASH  &none
-                     &none  &none  &none    &none  &none      &none
+       &none   &none    &none    &none    &none    &none  &none    &none    &none    &none
+       &kp F9  &kp F10  &kp F11  &kp F12  &none    &none  &kp F13  &kp F14  &kp F15  &kp F16
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &none    &none  &kp F5   &kp F6   &kp F7   &kp F8   &none
+                        &none    &none    &none    &none  &none    &none
             >;
         };
 
@@ -248,7 +248,7 @@
         DEVL {
             bindings = <
        &bt BT_CLR    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREV        &kp C_NEXT      &none  &none  &none  &none  &none
-       &kp K_MUTE    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE  &none           &none  &none  &none  &none  &none
+       &kp C_MUTE    &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE  &none           &none  &none  &none  &none  &none
 &none  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3      &bt BT_SEL 4    &none  &none  &none  &none  &none  &none
                                            &none                 &none             &none           &none  &none  &none
             >;
